@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Route, Routes } from "react-router-dom";
+import { Home } from "./Home";
+import { ProductDetail } from "./ProductDetail";
+import { CartContext } from "./CartContext";
+import { useCart } from "./hooks/use-cart";
+import { Profile } from "./Profile";
+import { lazy, Suspense } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+const Cart = lazy(() => delayForDemo(import("./Cart")));
 
+function delayForDemo(promise: any) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, 2000);
+  }).then(() => promise);
+}
 function App() {
-  const [count, setCount] = useState(0)
+  const { cartItems, addToCart, removeFromCart, removeProduct, clearCart } =
+    useCart();
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <CartContext.Provider
+        value={{
+          cartItems: cartItems,
+          addToCart: addToCart,
+          removeFromCart: removeFromCart,
+          removeProduct: removeProduct,
+          clearCart: clearCart,
+        }}
+      >
+        <Suspense fallback={<FontAwesomeIcon icon={faSpinner} />}>
+          <Routes>
+            <Route path="/">
+              <Route index element={<Home />} />
+              <Route path=":id" element={<ProductDetail />} />
+            </Route>
+            <Route path="cart" element={<Cart />}></Route>
+            <Route path="profile" element={<Profile />}></Route>
+          </Routes>
+        </Suspense>
+      </CartContext.Provider>
+    </div>
+  );
 }
 
-export default App
+export default App;
