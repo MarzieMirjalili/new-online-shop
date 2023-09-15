@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import { Flex } from "./components/Flex";
+import { Flex } from "../../components/Flex";
 import styled from "@emotion/styled";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";

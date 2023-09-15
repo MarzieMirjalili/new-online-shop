@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useQuery } from "react-query";
 import { useSearchParams } from "react-router-dom";
-import { Photo } from "../Home";
+import { Photo } from "../pages/productList/Home";
 import { useMemo } from "react";
 import moment from "moment";
 

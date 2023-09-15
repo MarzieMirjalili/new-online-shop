@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom";
-import { Home } from "./Home";
-import { ProductDetail } from "./ProductDetail";
+import { Home } from "./pages/productList/Home";
+import { ProductDetail } from "./pages/productDetail/ProductDetail";
 import { CartContext } from "./CartContext";
 import { useCart } from "./hooks/use-cart";
-import { Profile } from "./Profile";
+import { Profile } from "./pages/profile/Profile";
 import { lazy, Suspense } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
-const Cart = lazy(() => delayForDemo(import("./Cart")));
+const Cart = lazy(() => delayForDemo(import("./pages/Cart/Cart")));
 
 function delayForDemo(promise: any) {
   return new Promise((resolve) => {

@@ -1,15 +1,15 @@
 import { FC, useContext, useMemo } from "react";
-import { Typography } from "./components/Typography";
+import { Typography } from "../../components/Typography";
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
-import { Photo } from "./Home";
+import { Photo } from "../productList/Home";
 import axios from "axios";
-import { Flex } from "./components/Flex";
+import { Flex } from "../../components/Flex";
 import styled from "@emotion/styled";
 import moment from "moment";
-import { Button } from "./components/Button";
-import { Counter } from "./components/Counter";
-import { CartContext } from "./CartContext";
+import { Button } from "../../components/Button";
+import { Counter } from "../../components/Counter";
+import { CartContext } from "../../CartContext";
 
 export const StyledContainer = styled(Flex)`
   padding: 50px;

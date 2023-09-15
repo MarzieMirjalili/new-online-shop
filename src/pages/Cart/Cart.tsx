@@ -1,8 +1,8 @@
 import { FC, useContext, useEffect, useMemo, useState } from "react";
-import { CartContext } from "./CartContext";
-import { CasrtItem } from "./components/CartItem";
-import { Flex } from "./components/Flex";
-import { Button } from "./components/Button";
+import { CartContext } from "../../CartContext";
+import { CasrtItem } from "../../components/CartItem";
+import { Flex } from "../../components/Flex";
+import { Button } from "../../components/Button";
 
 export const Cart: FC = () => {
   const { cartItems } = useContext(CartContext);

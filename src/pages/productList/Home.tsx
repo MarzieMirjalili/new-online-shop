@@ -1,14 +1,14 @@
 import { FC, Suspense, lazy, useState } from "react";
-import { Menu } from "./components/Menu";
+import { Menu } from "../../components/Menu";
 import styled from "@emotion/styled";
 import { useSearchParams } from "react-router-dom";
-import { Flex } from "./components/Flex";
-import { Button } from "./components/Button";
-import { usePhotos } from "./hooks/use-photos";
+import { Flex } from "../../components/Flex";
+import { Button } from "../../components/Button";
+import { usePhotos } from "../../hooks/use-photos";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
-const Product = lazy(() => delayForDemo(import("./components/Product")));
+const Product = lazy(() => delayForDemo(import("../../components/Product")));
 
 const ListContainer = styled.div`
   display: grid;

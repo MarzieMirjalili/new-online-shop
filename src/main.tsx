@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App.tsx";
-import { GlobalStyles } from "./GlobalStyles.tsx";
+import { GlobalStyles } from "./components/GlobalStyles.tsx";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 const queryClient = new QueryClient();
