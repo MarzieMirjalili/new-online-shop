@@ -1,4 +1,4 @@
-import { FC, useContext, useMemo } from "react";
+import { useContext, useMemo } from "react";
 import { Card } from "../../../../components/Card";
 import { Typography } from "../../../../components/Typography";
 import styled from "@emotion/styled";
