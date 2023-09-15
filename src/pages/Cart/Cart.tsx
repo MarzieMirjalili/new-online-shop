@@ -1,6 +1,6 @@
 import { FC, useContext, useEffect, useMemo, useState } from "react";
 import { CartContext } from "../../CartContext";
-import { CasrtItem } from "../../components/CartItem";
+import { CasrtItem } from "./components/cartItem/CartItem";
 import { Flex } from "../../components/Flex";
 import { Button } from "../../components/Button";
 

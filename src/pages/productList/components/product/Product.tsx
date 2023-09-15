@@ -1,13 +1,13 @@
 import { FC, useContext, useMemo } from "react";
-import { Card } from "./Card";
-import { Typography } from "./Typography";
+import { Card } from "../../../../components/Card";
+import { Typography } from "../../../../components/Typography";
 import styled from "@emotion/styled";
-import { Flex } from "./Flex";
+import { Flex } from "../../../../components/Flex";
 import { Link } from "react-router-dom";
-import { Button } from "./Button";
-import { Counter } from "./Counter";
+import { Button } from "../../../../components/Button";
+import { Counter } from "../../../../components/Counter";
 import moment from "moment";
-import { CartContext } from "../CartContext";
+import { CartContext } from "../../../../CartContext";
 
 const ProductImage = styled.img`
   width: 100%;

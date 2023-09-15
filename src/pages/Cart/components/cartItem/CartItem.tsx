@@ -1,11 +1,11 @@
 import { FC, useContext } from "react";
-import { Card } from "./Card";
-import { CartContext, CartItem } from "../CartContext";
+import { Card } from "../../../../components/Card";
+import { CartContext, CartItem } from "../../../../CartContext";
 import styled from "@emotion/styled";
-import { Typography } from "./Typography";
-import { Flex } from "./Flex";
+import { Typography } from "../../../../components/Typography";
+import { Flex } from "../../../../components/Flex";
 import moment from "moment";
-import { Counter } from "./Counter";
+import { Counter } from "../../../../components/Counter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";

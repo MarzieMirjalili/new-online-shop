@@ -8,7 +8,9 @@ import { usePhotos } from "../../hooks/use-photos";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
-const Product = lazy(() => delayForDemo(import("../../components/Product")));
+const Product = lazy(() =>
+  delayForDemo(import("./components/product/Product"))
+);
 
 const ListContainer = styled.div`
   display: grid;
