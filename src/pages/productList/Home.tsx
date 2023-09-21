@@ -75,6 +75,7 @@ export const Home: FC = () => {
         <FilterItem type="date" onChange={(e) => setToDate(e.target.value)} />
         <Button onClick={applyFilters}>apply</Button>
       </FilterContainer>
+
       <ListContainer>
         {searchResult?.map((p) => (
           <Suspense fallback={<FontAwesomeIcon icon={faSpinner} />}>
