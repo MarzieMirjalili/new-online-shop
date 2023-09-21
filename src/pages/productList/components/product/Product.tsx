@@ -72,7 +72,7 @@ export default function Product({ id, imageUrl, title, date, price }: Product) {
           <Typography>{price}</Typography>
         </Flex>
       </InfoContainer>
-      {count == 0 ? (
+      {count === 0 ? (
         <StyledButton
           onClick={() => {
             addToCart({

@@ -11,6 +11,7 @@ export const GlobalStyles: FC = () => {
           --colors-gray: #686b78;
           --colors-gray-lightest: #f1f2f6;
           --colors-gray-light: #bdbfc6;
+          /* gkf */
           --colors-primary: #324fbe;
           --colors-primary-light: #ebeef9;
           --colors-primary-dark: #293978;
